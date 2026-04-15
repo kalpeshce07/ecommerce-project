@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from "./components/Button.jsx";
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -45,7 +46,9 @@ const Register = () => {
                 <input type="password" id="password" value={password} onChange={(e)=>setPassword(e.target.value)}></input>
             </div>
             <div>
-                <button type="submit">Register</button>
+                {/* <button type="submit">Register</button> */}
+                <Button variant="primary">Register</Button>
+
             </div>
 
         </div>

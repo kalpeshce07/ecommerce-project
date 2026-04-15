@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {AuthContext} from "./context/AuthContext";
+import Button from "./components/Button.jsx";
 function Login() {
   const {login}=useContext(AuthContext);
   const [email, setEmail] = useState("");
@@ -46,7 +47,8 @@ function Login() {
           ></input>
         </div>
         <div style={{ marginTop: "15px" }}>
-          <button type="submit">Login</button>
+          {/* <button type="submit">Login</button> */}
+          <Button variant="primary">Login</Button>
         </div>
       </form>
     </div>

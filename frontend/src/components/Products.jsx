@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import { Link } from "react-router-dom";
+import Card from "./Card.jsx";
+import "./../index.css";
+// import "./../styles.css";
 const Products = () => {
   const API_URL = "https://localhost:7001/api/products";
 
@@ -21,15 +24,15 @@ const Products = () => {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Products</h1>
+    <div>
+      <h1 className="text-2xl font-semibold mb-4">Products</h1>
 
       {products.length === 0 ? (
         <p>No products available</p>
       ) : (
-        <div style={{display:"flex"}}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard  key={product.id} product={product} />
           ))}
         </div>
       )}

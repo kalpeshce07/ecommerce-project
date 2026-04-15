@@ -12,7 +12,7 @@ import Register from "./Register";
 function App() {
   const {cartItems}=useContext(CartContext);
   return (
-    <>
+    <div className="bg-gray-100 min-h-screen">    
     <NavBar />
       <Routes>
         <Route path="/" element={<Products/>}></Route>
@@ -24,7 +24,7 @@ function App() {
         <Route path="/register" element={<Register />}></Route>
 
       </Routes>
-    </>
+    </div>
   );
 }
 export default App;
